@@ -17,11 +17,11 @@ try:
     print("=" * 15 + " 회사정보 확인 " + "=" * 15)
 
     ''' CorpInfo 구성
-                ceoname     (담당자 아이디)
-                corpName    (담당자 성명)
-                addr        (이메일)
-                bizType     (휴대폰번호)
-                bizClass    (팩스번호)
+                ceoname     (대표자 성명)
+                corpName    (상호)
+                addr        (주소)
+                bizType     (업태)
+                bizClass    (종목)
     '''
 
     response = faxService.getCorpInfo(testValue.testCorpNum, testValue.testUserID)
