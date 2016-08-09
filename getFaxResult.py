@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# code for console Encoding difference. Dont' mind on it 
+# code for console Encoding difference. Dont' mind on it
 import sys
 import imp
 imp.reload(sys)
@@ -12,21 +12,22 @@ from popbill import FaxService, PopbillException
 
 faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
-  
+
 try:
     print("팩스전송 내역 및 전송상태 확인")
-    
-    receiptNum = "015032710514400001" # 팩스전송 요청시 반환받은 접수번호
+
+    receiptNum = "016080910592000001" # 팩스전송 요청시 반환받은 접수번호
     resultList = faxService.getFaxResult(testValue.testCorpNum, receiptNum)
-    
+
     #전송결과 항목에 대한 자세한 사항은 "팩스 API 연동매뉴얼 > [3.3.1. 전송내역 및 전송상태 상태확인] 참조
-    
+
     i = 1
     for f in resultList:
         print("FaxResult[%d] : " % i)
         print("    sendState : %s" % f.sendState)
         print("    convState : %s" % f.convState)
         print("    sendNum : %s" % f.sendNum)
+        print("    senderName : %s" % f.senderName)
         print("    receiveNum : %s" % f.receiveNum)
         print("    receiveName : %s" % f.receiveName)
         print("    sendPageCnt : %s" % f.sendPageCnt)
@@ -39,6 +40,6 @@ try:
         print("    resultDT : %s" % f.resultDT)
         print("    sendResult : %s" % f.sendResult)
         i += 1
-    
+
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))
