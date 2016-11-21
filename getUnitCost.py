@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# code for console Encoding difference. Dont' mind on it 
+# code for console Encoding difference. Dont' mind on it
 import sys
 import imp
 imp.reload(sys)
@@ -10,15 +10,22 @@ import testValue
 
 from popbill import FaxService, PopbillException
 
-faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
-  
+
+'''
+팩스 전송단가를 확인합니다.
+'''
+
 try:
-    print("팩스 전송 단가 확인")
+    print("=" * 15 + " 팩스 전송단가 확인 " + "=" * 15)
 
-    unitCost = faxService.getUnitCost(testValue.testCorpNum)
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
 
-    print("단가: %f" % unitCost)
-    
+    unitCost = faxService.getUnitCost(CorpNum)
+
+    print("전송단가 : %f" % unitCost)
+
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

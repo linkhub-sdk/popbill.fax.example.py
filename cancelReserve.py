@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# code for console Encoding difference. Dont' mind on it 
+# code for console Encoding difference. Dont' mind on it
 import sys
 import imp
 imp.reload(sys)
@@ -10,17 +10,26 @@ import testValue
 
 from popbill import FaxService, PopbillException
 
-faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
-  
+
+'''
+예약전송 팩스요청건을 취소합니다.
+- 예약전송 취소는 예약전송시간 10분전까지 가능합니다.
+'''
+
 try:
-    print("예약문자 전송취소")
-    # 예약문자 취소는 예약전송시간 10분전까지만 가능
+    print("=" * 15 + " 예약문자 전송취소 " + "=" * 15)
 
-    receiptNum = "015032710223000001" # 팩스 예약전송 요청시 반환받은 접수번호
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
 
-    result = faxService.cancelReserve(testValue.testCorpNum, receiptNum)
-    print("처리결과 : [%d] %s" % (result.code,result.message))        
-    
+    # 팩스 예약전송 요청시 반환받은 접수번호
+    receiptNum = "015032710223000001"
+
+    result = faxService.cancelReserve(CorpNum, receiptNum)
+
+    print("처리결과 : [%d] %s" % (result.code,result.message))
+
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

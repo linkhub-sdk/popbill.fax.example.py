@@ -10,17 +10,17 @@ import testValue
 
 from popbill import FaxService, FaxReceiver, PopbillException
 
-faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 try:
-    print("팩스전송. 1파일 동보전송(수신번호 최대 1000개)")
+    print("=" * 15 + " 팩스전송. 1파일 동보전송(최대 1000건) " + "=" * 15)
+    
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
 
     # 발신번호
-    Sender = '07075103710'
-
-    # 발신자명
-    SenderName = '발신자명'
+    Sender = '07043042991'
 
     # 파일경로
     filePath = 'test.jpeg'
@@ -28,17 +28,17 @@ try:
     # 예약전송시간, 공백시 즉시전송, 작성형태 yyyyMMddHHmmss
     reserveDT = ''
 
-
-
     Receivers = [] # 수신정보 배열, 최대 1000개
-    for x in range(0, 100):
+    for x in range(0, 10):
         Receivers.append(
-                    	FaxReceiver(receiveNum='010111222', # 수신번호
-                        	        receiveName='수신자명'+str(x), # 수신자명
-                            	   )
-                    	)
+        	FaxReceiver(
+                receiveNum = '010111222', # 수신번호
+            	receiveName = '수신자명'+str(x), # 수신자명
+            )
+        )
 
-    receiptNum = faxService.sendFax_multi(testValue.testCorpNum, Sender, SenderName, Receivers, filePath, reserveDT)
+    receiptNum = faxService.sendFax_multi(CorpNum, Sender, Receivers,
+        filePath, reserveDT)
 
     print("receiptNum : %s" % receiptNum)
 

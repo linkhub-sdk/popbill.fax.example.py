@@ -10,16 +10,24 @@ import testValue
 
 from popbill import FaxService, PopbillException
 
-faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
+'''
+팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송
+결과를 확인합니다.
+'''
+
 try:
-    print("팩스전송 내역 및 전송상태 확인")
+    print("=" * 15 + " 팩스전송 내역 및 전송상태 확인 " + "=" * 15)
 
-    receiptNum = "016080910592000001" # 팩스전송 요청시 반환받은 접수번호
-    resultList = faxService.getFaxResult(testValue.testCorpNum, receiptNum)
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
 
-    #전송결과 항목에 대한 자세한 사항은 "팩스 API 연동매뉴얼 > [3.3.1. 전송내역 및 전송상태 상태확인] 참조
+    # 팩스전송 요청시 반환받은 접수번호
+    receiptNum = "016080910592000001"
+
+    resultList = faxService.getFaxResult(CorpNum, receiptNum)
 
     i = 1
     for f in resultList:

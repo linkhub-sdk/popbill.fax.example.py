@@ -8,13 +8,13 @@ except Exception as E: pass
 
 import testValue
 
-from popbill import FaxService,PopbillException
+from popbill import FaxService, PopbillException
 
-faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 try:
-    print("=" * 15 + " 회원아이디 중복확인 " + "=" * 15)
+    print("=" * 15 + " 팝빌회원 아이디 중복확인 " + "=" * 15)
 
     # 중복확인할 아이디
     memberID = "testkorea"

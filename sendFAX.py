@@ -10,17 +10,17 @@ import testValue
 
 from popbill import FaxService, PopbillException
 
-faxService =  FaxService(testValue.LinkID,testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 try:
-    print("팩스전송. 1파일 1건 전송")
+    print("=" * 15 + " 팩스전송. 1파일 1건 전송 " + "=" * 15)
+
+    # 팝빌회원 사업자번호
+    CorpNum = testValue.testCorpNum
 
     # 발신번호
-    Sender = '07075103710'
-
-    # 발신자명
-    SenderName = '발신자명'
+    Sender = '07043042991'
 
     # 수신번호
     Receiver = '010111222'
@@ -31,7 +31,7 @@ try:
     #파일경로
     FilePath = 'test2.jpeg'
 
-    receiptNum = faxService.sendFax(testValue.testCorpNum, Sender, SenderName, Receiver, ReceiverName, FilePath)
+    receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName, FilePath)
 
     print("receiptNum : %s" % receiptNum)
 
