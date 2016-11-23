@@ -25,7 +25,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스전송 요청시 반환받은 접수번호
-    receiptNum = "016080910592000001"
+    receiptNum = "016112313405100001"
 
     resultList = faxService.getFaxResult(CorpNum, receiptNum)
 

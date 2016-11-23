@@ -10,7 +10,7 @@ import testValue
 
 from popbill import CorpInfo, FaxService, PopbillException
 
-faxService =  FaxService(testValue.LinkID, testValue.SecretKey)
+faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 '''
