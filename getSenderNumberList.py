@@ -18,7 +18,7 @@ faxService.IsTest = testValue.IsTest
 '''
 
 try:
-    print("=" * 15 + " 팩스전송 내발신번호 목록 확인 " + "=" * 15)
+    print("=" * 15 + " 팩스전송 발신번호 목록 확인 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
