@@ -14,25 +14,24 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 '''
-팩스 전송내역 목록/발신번호 관리 팝업 URL을 반환합니다.
-- 보안정책으로 인해 반환된 URL은 30초의 유효시간을 갖습니다.
+등록된 팩스 발신번호 목록을 확인합니다.
 '''
 
 try:
-    print("=" * 15 + " 팩스 서비스 관련 URL 확인 " + "=" * 15)
+    print("=" * 15 + " 팩스전송 내발신번호 목록 확인 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
+    senderList = faxService.getSenderNumberList(CorpNum)
 
-    # BOX-팩스 전송내역 목록 팝업, SENDER-발신번호 관리 팝업
-    TOGO = "SENDER"
-
-    url = faxService.getURL(CorpNum, UserID, TOGO)
-
-    print("URL : " +url)
+    i = 1
+    for f in senderList:
+        print("SenderInfo[%d] : " % i)
+        print("    number (발신번호) : %s" % f.number)
+        print("    representYN (대표번호 지정여부) : %s" % f.representYN)
+        print("    state (등록상태) : %s" % f.state)
+        i += 1
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))
