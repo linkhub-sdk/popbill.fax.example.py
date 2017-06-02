@@ -15,30 +15,40 @@ faxService.IsTest = testValue.IsTest
 
 try:
     print("=" * 15 + " 팩스전송. 1파일 동보전송(최대 1000건) " + "=" * 15)
-    
+
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
+
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
+
 
     # 발신번호
     Sender = '07043042991'
 
+    # 발신자명
+    SenderName = '발신자명'
+
     # 파일경로
     filePath = 'test.jpeg'
 
-    # 예약전송시간, 공백시 즉시전송, 작성형태 yyyyMMddHHmmss
-    reserveDT = ''
+    # 광고팩스 전송여부
+    adsYN = False
+
+    # 예약전송시간, None처리시 즉시전송, 작성형태 yyyyMMddHHmmss
+    reserveDT = None
 
     Receivers = [] # 수신정보 배열, 최대 1000개
-    for x in range(0, 10):
+    for x in range(0, 5):
         Receivers.append(
         	FaxReceiver(
-                receiveNum = '010111222', # 수신번호
+                receiveNum = '070111222', # 수신번호
             	receiveName = '수신자명'+str(x), # 수신자명
             )
         )
 
     receiptNum = faxService.sendFax_multi(CorpNum, Sender, Receivers,
-        filePath, reserveDT)
+        filePath, reserveDT, UserID, SenderName, adsYN)
 
     print("receiptNum : %s" % receiptNum)
 

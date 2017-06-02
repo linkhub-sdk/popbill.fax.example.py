@@ -19,11 +19,18 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
+
+
     # 발신번호
     Sender = '07043042991'
 
+    # 발신자명
+    SenderName = '발신자명'
+
     # 수신번호
-    Receiver = '010111222'
+    Receiver = '070111222'
 
     # 수신자명
     ReceiverName = '수신자명'
@@ -31,7 +38,14 @@ try:
     #파일경로
     FilePath = 'test2.jpeg'
 
-    receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName, FilePath)
+    # 예약전송일시, None 처리시 즉시전송
+    ReserveDT = None
+
+    # 광고팩스 전송여부
+    AdsYN = False
+
+    receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName,
+        FilePath, ReserveDT, UserID, SenderName, AdsYN)
 
     print("receiptNum : %s" % receiptNum)
 
