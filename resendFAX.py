@@ -24,8 +24,11 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
+
     # 팩스 접수번호
-    ReceiptNum = '017021616003700001'
+    ReceiptNum = '017071811581700001'
 
     # 발신번호, 공백처리시 기존전송정보로 재전송
     Sender = '07043042991'
@@ -40,7 +43,14 @@ try:
     # 수신자명
     ReceiverName = ''
 
-    receiptNum = faxService.resendFax(CorpNum, ReceiptNum, Sender, SenderName, Receiver, ReceiverName)
+    # 예약전송시간, 공백시 즉시전송, 작성형태 yyyyMMddHHmmss
+    ReserveDT = ''
+
+    # 팩스제목
+    Title = '팩스 재전송 제목'
+
+    receiptNum = faxService.resendFax(CorpNum, ReceiptNum, Sender, SenderName,
+        Receiver, ReceiverName, ReserveDT, UserID, Title)
 
     print("receiptNum : %s" % receiptNum)
 

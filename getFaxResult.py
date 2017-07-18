@@ -25,29 +25,30 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스전송 요청시 반환받은 접수번호
-    receiptNum = "016112313405100001"
+    receiptNum = "017071812030700001"
 
     resultList = faxService.getFaxResult(CorpNum, receiptNum)
 
-    i = 1
-    for f in resultList:
-        print("FaxResult[%d] : " % i)
-        print("    sendState : %s" % f.sendState)
-        print("    convState : %s" % f.convState)
-        print("    sendNum : %s" % f.sendNum)
-        print("    senderName : %s" % f.senderName)
-        print("    receiveNum : %s" % f.receiveNum)
-        print("    receiveName : %s" % f.receiveName)
-        print("    sendPageCnt : %s" % f.sendPageCnt)
-        print("    successPageCnt : %s" % f.successPageCnt)
-        print("    failPageCnt : %s" % f.failPageCnt)
-        print("    refundPageCnt : %s" % f.refundPageCnt)
-        print("    cancelPageCnt : %s" % f.cancelPageCnt)
-        print("    reserveDT : %s" % f.reserveDT)
-        print("    sendDT : %s" % f.sendDT)
-        print("    resultDT : %s" % f.resultDT)
-        print("    sendResult : %s" % f.sendResult)
-        i += 1
+
+    for index, f in enumerate(resultList):
+        print("FaxResult[%d] : " % index)
+        print("    state (전송상태 코드) : %s" % f.state)
+        print("    result (전송결과 코드) : %s" % f.result)
+        print("    sendNum (발신번호) : %s" % f.sendNum)
+        print("    senderName (발신자명) : %s" % f.senderName)
+        print("    receiveNum (수신번호) : %s" % f.receiveNum)
+        print("    receiveName (수신자명) : %s" % f.receiveName)
+        print("    title (팩스제목) : %s" % f.title)
+        print("    sendPageCnt (전체 페이지수) : %s" % f.sendPageCnt)
+        print("    successPageCnt (성공 페이지수) : %s" % f.successPageCnt)
+        print("    failPageCnt (실패 페이지수) : %s" % f.failPageCnt)
+        print("    refundPageCnt (환불 페이지수) : %s" % f.refundPageCnt)
+        print("    cancelPageCnt (취소 페이지수) : %s" % f.cancelPageCnt)
+        print("    receiptDT (접수일시) : %s" % f.receiptDT)
+        print("    reserveDT (예약일시) : %s" % f.reserveDT)
+        print("    sendDT (전송일시) : %s" % f.sendDT)
+        print("    resultDT (전송결과 수신일시) : %s" % f.resultDT)
+
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

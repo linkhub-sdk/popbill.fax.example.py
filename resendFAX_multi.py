@@ -24,8 +24,11 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
+
     # 팩스 접수번호
-    ReceiptNum = '017021616224500001'
+    ReceiptNum = '017071811581700001'
 
     # 발신번호, 공백처리시 기존전송정보로 재전송
     Sender = '07043042991'
@@ -34,10 +37,13 @@ try:
     SenderName = '발신자명'
 
     # 예약전송시간, 공백시 즉시전송, 작성형태 yyyyMMddHHmmss
-    reserveDT = ''
+    ReserveDT = ''
 
     # 수신정보 배열 None 처리시 기존전송정보로 전송
     Receivers = None
+
+    # 팩스제목
+    Title = 'Python 팩스동보 재전송'
 
     # 수신자 정보가 기존전송정보와 다를경우 아래의 코드 참조
     """
@@ -52,7 +58,7 @@ try:
     """
 
     receiptNum = faxService.resendFax_multi(CorpNum, ReceiptNum, Sender,
-        SenderName, Receivers, reserveDT)
+        SenderName, Receivers, ReserveDT, UserID, Title)
 
     print("receiptNum : %s" % receiptNum)
 

@@ -35,19 +35,22 @@ try:
     # 수신자명
     ReceiverName = '수신자명'
 
-    #파일경로
+    # 파일경로
     FilePath = 'test2.jpeg'
 
-    # 예약전송일시, None 처리시 즉시전송
+    # 예약전송일시, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
     ReserveDT = None
 
     # 광고팩스 전송여부
     AdsYN = False
 
-    receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName,
-        FilePath, ReserveDT, UserID, SenderName, AdsYN)
+    # 팩스제목
+    Title = "Python 팩스단건 제목"
 
-    print("receiptNum : %s" % receiptNum)
+    receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName,
+        FilePath, ReserveDT, UserID, SenderName, AdsYN, Title)
+
+    print("receiptNum (접수번호) : %s" % receiptNum)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))

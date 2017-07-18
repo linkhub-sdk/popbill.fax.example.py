@@ -25,10 +25,10 @@ try:
     UserID = testValue.testUserID
 
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20161001"
+    SDate = "20170101"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20161131"
+    EDate = "20170731"
 
     # 팩스전송상태 배열, 1(대기), 2(성공), 3(실패), 4(취소)
     State = ["1","2","3","4"]
@@ -62,7 +62,7 @@ try:
     for info in response.list :
         print("====== 팩스 전송정보 [%d] ======"% i)
         for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
+            print("    %s : %s" % (key, value))
         i += 1
         print("")
 

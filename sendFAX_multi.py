@@ -30,13 +30,16 @@ try:
     SenderName = '발신자명'
 
     # 파일경로
-    filePath = 'test.jpeg'
+    FilePath = 'test.jpeg'
 
     # 광고팩스 전송여부
-    adsYN = False
+    AdsYN = False
 
-    # 예약전송시간, None처리시 즉시전송, 작성형태 yyyyMMddHHmmss
-    reserveDT = None
+    # 예약전송시간, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
+    ReserveDT = None
+
+    # 팩스제목
+    Title = 'Python 팩스동보전송 제목'
 
     Receivers = [] # 수신정보 배열, 최대 1000개
     for x in range(0, 5):
@@ -48,9 +51,9 @@ try:
         )
 
     receiptNum = faxService.sendFax_multi(CorpNum, Sender, Receivers,
-        filePath, reserveDT, UserID, SenderName, adsYN)
+        FilePath, ReserveDT, UserID, SenderName, AdsYN, Title)
 
-    print("receiptNum : %s" % receiptNum)
+    print("receiptNum (접수번호) : %s" % receiptNum)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code , PE.message))
