@@ -24,19 +24,19 @@ try:
 
 
     # 발신번호
-    Sender = '07043042991'
+    Sender = '0264429700'
 
     # 발신자명
     SenderName = '발신자명'
 
     # 수신번호
-    Receiver = '070111222'
+    Receiver = '0264429700'
 
     # 수신자명
     ReceiverName = '수신자명'
 
-    # 파일경로
-    FilePath = 'test2.jpeg'
+    # 파일경로 (해당파일에 읽기 권한이 설정되어 있어야 함. 최대 20개)
+    FilePath = ['test.jpeg', 'test2.jpeg']
 
     # 예약전송일시, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
     ReserveDT = None
@@ -45,7 +45,7 @@ try:
     AdsYN = False
 
     # 팩스제목
-    Title = "Python 팩스단건 제목"
+    Title = "Python 변환 테스트"
 
     receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName,
         FilePath, ReserveDT, UserID, SenderName, AdsYN, Title)

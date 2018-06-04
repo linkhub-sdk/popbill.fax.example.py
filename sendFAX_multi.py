@@ -29,8 +29,8 @@ try:
     # 발신자명
     SenderName = '발신자명'
 
-    # 파일경로
-    FilePath = 'test.jpeg'
+    # 파일경로 (해당파일에 읽기 권한이 설정되어 있어야 함. 최대 20개)
+    FilePath = ['test.jpeg', 'test2.jpeg']
 
     # 광고팩스 전송여부
     AdsYN = False
