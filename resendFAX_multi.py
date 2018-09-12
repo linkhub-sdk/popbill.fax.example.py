@@ -2,13 +2,16 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
-from popbill import FaxService, FaxReceiver, PopbillException
+from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
@@ -28,10 +31,10 @@ try:
     UserID = testValue.testUserID
 
     # 팩스 접수번호
-    ReceiptNum = '017071811581700001'
+    ReceiptNum = '018091210574400001'
 
     # 발신번호, 공백처리시 기존전송정보로 재전송
-    Sender = '07043042991'
+    Sender = '010111222'
 
     # 발신자명, 공백처리시 기존전송정보로 재전송
     SenderName = '발신자명'
@@ -57,10 +60,15 @@ try:
         )
     """
 
+    # 전송요청번호
+    # 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    RequestNum = ""
+
     receiptNum = faxService.resendFax_multi(CorpNum, ReceiptNum, Sender,
-        SenderName, Receivers, ReserveDT, UserID, Title)
+                                            SenderName, Receivers, ReserveDT, UserID, Title, RequestNum)
 
     print("receiptNum : %s" % receiptNum)
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))

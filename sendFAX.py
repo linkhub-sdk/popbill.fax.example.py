@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -22,21 +25,20 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-
     # 발신번호
-    Sender = '0264429700'
+    Sender = '010111222'
 
     # 발신자명
     SenderName = '발신자명'
 
     # 수신번호
-    Receiver = '0264429700'
+    Receiver = '010111222'
 
     # 수신자명
     ReceiverName = '수신자명'
 
     # 파일경로 (해당파일에 읽기 권한이 설정되어 있어야 함. 최대 20개)
-    FilePath = ['test.jpeg', 'test2.jpeg']
+    FilePath = ['test.jpeg']
 
     # 예약전송일시, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
     ReserveDT = None
@@ -45,12 +47,17 @@ try:
     AdsYN = False
 
     # 팩스제목
-    Title = "Python 변환 테스트"
+    Title = "Python 테스트"
+
+    # 전송요청번호
+    # 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    RequestNum = ""
 
     receiptNum = faxService.sendFax(CorpNum, Sender, Receiver, ReceiverName,
-        FilePath, ReserveDT, UserID, SenderName, AdsYN, Title)
+                                    FilePath, ReserveDT, UserID, SenderName, AdsYN, Title, RequestNum)
 
     print("receiptNum (접수번호) : %s" % receiptNum)
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))
