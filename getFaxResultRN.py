@@ -26,8 +26,8 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 예약팩스전송 요청시 할당한 전송요청번호
-    requestNum = "017071812030700001"
+    # 팩스전송 요청시 할당한 전송요청번호 (requestNum)
+    requestNum = "20180809162125"
 
     resultList = faxService.getFaxResultRN(CorpNum, requestNum)
 
