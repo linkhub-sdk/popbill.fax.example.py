@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -24,14 +27,15 @@ try:
 
     UserID = testValue.testUserID
 
+    # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20170101"
+    SDate = "20180930"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20170731"
+    EDate = "20181010"
 
     # 팩스전송상태 배열, 1(대기), 2(성공), 3(실패), 4(취소)
-    State = ["1","2","3","4"]
+    State = ["1", "2", "3", "4"]
 
     # 예약전송 검색여부, True-예약전송건 조회, False-전체조회
     ReserveYN = False
@@ -49,7 +53,7 @@ try:
     Order = "D"
 
     response = faxService.search(CorpNum, SDate, EDate, State, ReserveYN, SenderOnly,
-        Page, PerPage, Order, UserID)
+                                 Page, PerPage, Order, UserID)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
@@ -59,8 +63,8 @@ try:
     print("pageCount (페이지 개수) : %s \n" % response.pageCount)
 
     i = 1
-    for info in response.list :
-        print("====== 팩스 전송정보 [%d] ======"% i)
+    for info in response.list:
+        print("====== 팩스 전송정보 [%d] ======" % i)
         for key, value in info.__dict__.items():
             print("    %s : %s" % (key, value))
         i += 1
@@ -69,4 +73,4 @@ try:
 
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))

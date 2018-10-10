@@ -27,7 +27,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스전송 요청시 할당한 전송요청번호 (requestNum)
-    requestNum = "20180809162125"
+    requestNum = "20180929-001"
 
     resultList = faxService.getFaxResultRN(CorpNum, requestNum)
 
@@ -49,6 +49,10 @@ try:
         print("    reserveDT (예약일시) : %s" % f.reserveDT)
         print("    sendDT (전송일시) : %s" % f.sendDT)
         print("    resultDT (전송결과 수신일시) : %s" % f.resultDT)
+        print("    receiptNum (접수번호) : %s" % f.receiptNum)
+        print("    requestNum (요청번호) : %s" % f.requestNum)
+        print("    chargePageCnt (과금 페이지수) : %s" % f.chargePageCnt)
+        print("    tiffFileSize (변환파일용랑) : %s" % f.tiffFileSize)
 
 
 except PopbillException as PE:

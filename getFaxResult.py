@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -25,10 +28,9 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스전송 요청시 반환받은 접수번호
-    receiptNum = "017071812030700001"
+    receiptNum = "018092923330400001"
 
     resultList = faxService.getFaxResult(CorpNum, receiptNum)
-
 
     for index, f in enumerate(resultList):
         print("FaxResult[%d] : " % index)
@@ -48,7 +50,11 @@ try:
         print("    reserveDT (예약일시) : %s" % f.reserveDT)
         print("    sendDT (전송일시) : %s" % f.sendDT)
         print("    resultDT (전송결과 수신일시) : %s" % f.resultDT)
+        print("    receiptNum (접수번호) : %s" % f.receiptNum)
+        print("    requestNum (요청번호) : %s" % f.requestNum)
+        print("    chargePageCnt (과금 페이지수) : %s" % f.chargePageCnt)
+        print("    tiffFileSize (변환파일용랑) : %s" % f.tiffFileSize)
 
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))
