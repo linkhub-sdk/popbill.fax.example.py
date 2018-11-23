@@ -17,7 +17,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 '''
-팝빌 로그인 URL을 반환합니다.
+팝빌에 로그인 상태로 접근할 수 있는 팝업 URL을 반환합니다.
 - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
 '''
 
