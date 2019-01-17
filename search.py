@@ -29,16 +29,16 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20180930"
+    SDate = "20190101"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20181010"
+    EDate = "20190117"
 
     # 팩스전송상태 배열, 1(대기), 2(성공), 3(실패), 4(취소)
     State = ["1", "2", "3", "4"]
 
     # 예약전송 검색여부, True-예약전송건 조회, False-전체조회
-    ReserveYN = False
+    ReserveYN = True
 
     # 개인조회 여부, True-개인조회, False-회사조회
     SenderOnly = False

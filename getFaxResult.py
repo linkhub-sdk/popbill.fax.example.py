@@ -17,8 +17,8 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 '''
-팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송
-결과를 확인합니다.
+팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송 결과를 확인합니다.
+- 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.1 GetFaxDetail (전송내역 및 전송상태 확인)을 참조하시기 바랍니다.
 '''
 
 try:
@@ -53,7 +53,7 @@ try:
         print("    receiptNum (접수번호) : %s" % f.receiptNum)
         print("    requestNum (요청번호) : %s" % f.requestNum)
         print("    chargePageCnt (과금 페이지수) : %s" % f.chargePageCnt)
-        print("    tiffFileSize (변환파일용랑) : %s" % f.tiffFileSize)
+        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % f.tiffFileSize)
 
 
 except PopbillException as PE:

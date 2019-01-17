@@ -16,6 +16,11 @@ from popbill import FaxService, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
+'''
+팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+ - 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
+'''
+
 try:
     print("=" * 15 + " 팩스전송. 1파일 1건 전송 " + "=" * 15)
 
@@ -26,7 +31,7 @@ try:
     UserID = testValue.testUserID
 
     # 발신번호
-    Sender = '010111222'
+    Sender = '07043042992'
 
     # 발신자명
     SenderName = '발신자명'
@@ -41,13 +46,13 @@ try:
     FilePath = ['test.jpeg']
 
     # 예약전송일시, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
-    ReserveDT = None
+    ReserveDT = ''
 
     # 광고팩스 전송여부
     AdsYN = False
 
     # 팩스제목
-    Title = "Python 테스트"
+    Title = "excel"
 
     # 전송요청번호
     # 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.

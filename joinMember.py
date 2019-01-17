@@ -23,44 +23,44 @@ try:
     # 회원정보
     newMember = JoinForm(
 
-        # 회원아이디, 최대 20자
-        ID = "testkorea1118",
+        # 아이디 (6자 이상 50자 미만)
+        ID="join_id_test",
 
-        # 비밀번호, 최대 20자
-        PWD = "this_is_password",
+        # 비밀번호 (6자 이상 20자 미만)
+        PWD="this_is_password",
 
-        # 사업자번호
-        CorpNum = "1234567890",
+        # 사업자번호 "-" 제외
+        CorpNum="0000000000",
 
-        # 상호
-        CorpName = "테스트가입상호",
+        # 대표자성명 (최대 100자)
+        CEOName="테스트대표자성명",
 
-        # 대표자성명
-        CEOName = "테스트대표자성명",
+        # 상호 (최대 200자)
+        CorpName="테스트가입상호",
 
-        # 주소
-        Addr = "테스트 회사 주소",
+        # 주소 (최대 300자)
+        Addr="테스트회사주소",
 
-        # 업태
-        BizType = "테스트업태",
+        # 업태 (최대 100자)
+        BizType="테스트업태",
 
-        # 종목
-        BizClass = "테스트업종",
+        # 종목 (최대 100자)
+        BizClass="테스트업종",
 
-        # 담당자 성명
-        ContactName = "담당자성명",
+        # 담당자 성명 (최대 100자)
+        ContactName="담당자성명",
 
-        # 담당자 연락처
-        ContactTEL = "070-4304-2991",
+        # 담당자 이메일주소 (최대 100자)
+        ContactEmail="test@test.com",
 
-        # 담당자 휴대폰번호
-        ContactHP = "010-2222-3333",
+        # 담당자 연락처 (최대 20자)
+        ContactTEL="070-111-222",
 
-        # 담당자 팩스번호
-        ContactFAX = "070-4304-2991",
+        # 담당자 휴대폰번호 (최대 20자)
+        ContactHP="010-111-222",
 
-        # 담당자 메일주소
-        ContactEmail = "test@test.com"
+        # 담당자 팩스번호 (최대 20자)
+        ContactFAX="070-111-222"
     )
 
     result = faxService.joinMember(newMember)

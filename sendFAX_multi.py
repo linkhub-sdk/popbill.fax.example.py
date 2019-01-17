@@ -16,8 +16,13 @@ from popbill import FaxService, FaxReceiver, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
+'''
+[대량전송] 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+- 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
+'''
+
 try:
-    print("=" * 15 + " 팩스전송. 1파일 동보전송(최대 1000건) " + "=" * 15)
+    print("=" * 15 + " 팩스전송. 1파일 동보전송 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum

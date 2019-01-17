@@ -2,9 +2,12 @@
 # code for console Encoding difference. Dont' mind on it
 import sys
 import imp
+
 imp.reload(sys)
-try: sys.setdefaultencoding('UTF8')
-except Exception as E: pass
+try:
+    sys.setdefaultencoding('UTF8')
+except Exception as E:
+    pass
 
 import testValue
 
@@ -23,36 +26,39 @@ try:
     UserID = testValue.testUserID
 
     # 담당자 정보
-    newContact = ContactInfo (
+    newContact = ContactInfo(
 
-        # 아이디
-        id = "testkorea",
+        # 아이디 (6자 이상 50자 미만)
+        id="popbill_test_id",
 
-        # 비밀번호
-        pwd = "this_is_password",
+        # 비밀번호 (6자 이상 20자 미만)
+        pwd="popbill_test_pwd",
 
-        # 담당자명
-        personName = "정대리",
+        # 담당자명 (최대 100자)
+        personName="담당자명",
 
-        # 연락처
-        tel = "010-4304-2991",
+        # 담당자 연락처 (최대 20자)
+        tel="010-111-222",
 
-        # 휴대폰번호
-        hp = "010-4304-2991",
+        # 담당자 휴대폰번호 (최대 20자)
+        hp="010-111-222",
 
-        # 팩스번호
-        fax = "070-4324-2991",
+        # 담당자 팩스번호 (최대 20자)
+        fax="070-111-222",
 
-        # 메일주소
-        email = "dev@linkhub.co.kr",
+        # 담당자 이메일 (최대 100자)
+        email="test@test.com",
 
         # 회사조회 권한여부, True(회사조회) False(개인조회)
-        searchAllAllowYN = True
+        searchAllAllowYN=True,
+
+        # 관리자 권한여부, True(관리자), False(사용자)
+        mgrYN=True
     )
 
     result = faxService.registContact(CorpNum, newContact, UserID)
 
-    print("처리결과 : [%d] %s" % (result.code,result.message))
+    print("처리결과 : [%d] %s" % (result.code, result.message))
 
 except PopbillException as PE:
-    print("Exception Occur : [%d] %s" % (PE.code , PE.message))
+    print("Exception Occur : [%d] %s" % (PE.code, PE.message))
