@@ -17,7 +17,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 
 '''
-전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
+[대량전송] 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
 - 접수일로부터 60일이 경과된 경우 재전송할 수 없습니다.
 - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
 - 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561

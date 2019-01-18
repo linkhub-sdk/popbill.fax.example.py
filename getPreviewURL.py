@@ -18,6 +18,7 @@ faxService.IsTest = testValue.IsTest
 
 '''
 접수한 팩스 전송건에 대한 미리보기 팝업 URL을 반환합니다.
+- 팩스 미리보기는 팩스 변환 완료후 가능합니다
 - 보안정책으로 인해 반환된 URL은 30초의 유효시간을 갖습니다.
 '''
 
@@ -28,7 +29,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스 접수번호
-    ReceiptNum = "018012215343900001"
+    ReceiptNum = "019011813341400001"
 
     # 팝빌회원 아이디
     UserID = testValue.testUserID
