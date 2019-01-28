@@ -36,7 +36,7 @@ try:
     tmp += "addr(주소) : " + response.addr + "\n"
     tmp += "bizType(업태) : " + response.bizType + "\n"
     tmp += "bizClass(종목) : " + response.bizClass
-    print(tmp);
+    print(tmp)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

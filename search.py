@@ -38,7 +38,7 @@ try:
     State = ["1", "2", "3", "4"]
 
     # 예약전송 검색여부, True-예약전송건 조회, False-전체조회
-    ReserveYN = True
+    ReserveYN = False
 
     # 개인조회 여부, True-개인조회, False-회사조회
     SenderOnly = False
@@ -62,15 +62,27 @@ try:
     print("pageNum (페에지 번호) : %s " % response.pageNum)
     print("pageCount (페이지 개수) : %s \n" % response.pageCount)
 
-    i = 1
     for info in response.list:
-        print("====== 팩스 전송정보 [%d] ======" % i)
-        for key, value in info.__dict__.items():
-            print("    %s : %s" % (key, value))
-        i += 1
-        print("")
-
-
-
+        print("    state (전송상태 코드) : %s" % info.state)
+        print("    result (전송결과 코드) : %s" % info.result)
+        print("    sendNum (발신번호) : %s" % info.sendNum)
+        print("    senderName (발신자명) : %s" % info.senderName)
+        print("    receiveNum (수신번호) : %s" % info.receiveNum)
+        print("    receiveName (수신자명) : %s" % info.receiveName)
+        print("    title (팩스제목) : %s" % info.title)
+        print("    sendPageCnt (전체 페이지수) : %s" % info.sendPageCnt)
+        print("    successPageCnt (성공 페이지수) : %s" % info.successPageCnt)
+        print("    failPageCnt (실패 페이지수) : %s" % info.failPageCnt)
+        print("    refundPageCnt (환불 페이지수) : %s" % info.refundPageCnt)
+        print("    cancelPageCnt (취소 페이지수) : %s" % info.cancelPageCnt)
+        print("    reserveDT (예약일시) : %s" % info.reserveDT)
+        print("    receiptDT (접수일시) : %s" % info.receiptDT)
+        print("    sendDT (발송일시) : %s" % info.sendDT)
+        print("    resultDT (전송결과 수신일시) : %s" % info.resultDT)
+        print("    fileNames (전송 파일명 리스트) : %s" % info.fileNames)
+        print("    receiptNum (접수번호) : %s" % info.receiptNum)
+        print("    requestNum (요청번호) : %s" % info.requestNum)
+        print("    chargePageCnt (과금 페이지수) : %s" % info.chargePageCnt)
+        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % info.tiffFileSize + '\n')
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

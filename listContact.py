@@ -32,9 +32,15 @@ try:
     response = faxService.listContact(CorpNum, UserID)
 
     for info in response:
-        for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
-        print("")
-
+        print("id (아이디) : %s" % info.id)
+        print("personName (담당자 성명) : %s" % info.personName)
+        print("email (담당자 이메일) : %s" % info.email)
+        print("hp (담당자 휴대폰번호) : %s" % info.hp)
+        print("fax (담당자 팩스번호) : %s" % info.fax)
+        print("tel (담당자 연락처) : %s" % info.tel)
+        print("regDT (등록일시) : %s" % info.regDT)
+        print("searchAllAllowYN (회사 조회권한) : %s" % info.searchAllAllowYN)
+        print("mgrYN (관리자 여부): %s" % info.mgrYN)
+        print("state (상태): %s" % info.state) + '\n'
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
