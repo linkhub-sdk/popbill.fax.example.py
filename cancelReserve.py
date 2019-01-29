@@ -27,7 +27,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팩스 예약전송 요청시 반환받은 접수번호
+    # 예약 팩스전송요청시 발급받은 접수번호(receiptNum)
     receiptNum = "018120517184000001"
 
     result = faxService.cancelReserve(CorpNum, receiptNum)

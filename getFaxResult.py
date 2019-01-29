@@ -27,7 +27,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팩스전송 요청시 반환받은 접수번호
+    # 팩스전송요청시 발급받은 접수번호(receiptNum)
     receiptNum = "019012818144300001"
 
     resultList = faxService.getFaxResult(CorpNum, receiptNum)

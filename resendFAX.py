@@ -33,7 +33,7 @@ try:
     UserID = testValue.testUserID
 
     # 팩스 접수번호
-    ReceiptNum = '018091210574400001'
+    ReceiptNum = '019012313543100001'
 
     # 발신번호, 공백처리시 기존전송정보로 재전송
     Sender = '010111222'
