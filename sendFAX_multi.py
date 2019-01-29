@@ -46,7 +46,7 @@ try:
     ReserveDT = None
 
     # 팩스제목
-    Title = 'Python 팩스동보전송 제목'
+    Title = '팩스 동보전송 제목'
 
     Receivers = []  # 수신정보 배열, 최대 1000개
     for x in range(0, 5):
