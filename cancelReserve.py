@@ -22,7 +22,7 @@ faxService.IsTest = testValue.IsTest
 '''
 
 try:
-    print("=" * 15 + " 예약문자 전송취소 " + "=" * 15)
+    print("=" * 15 + " 예약팩스 전송취소 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
