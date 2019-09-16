@@ -15,6 +15,7 @@ from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
+faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 [대량전송] 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.

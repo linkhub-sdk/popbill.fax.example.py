@@ -15,6 +15,7 @@ from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
+faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팩스전송요청시 발급받은 접수번호(receiptNum)로 팩스 예약전송건을 취소합니다.

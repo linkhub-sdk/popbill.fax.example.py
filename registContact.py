@@ -15,6 +15,7 @@ from popbill import ContactInfo, FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
+faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 try:
     print("=" * 15 + " 담당자 등록 " + "=" * 15)

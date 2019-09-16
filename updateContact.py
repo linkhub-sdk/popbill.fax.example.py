@@ -15,6 +15,7 @@ from popbill import ContactInfo, FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
+faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 연동회원의 담당자 정보를 수정합니다.

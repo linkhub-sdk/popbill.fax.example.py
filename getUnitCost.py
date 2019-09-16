@@ -15,6 +15,7 @@ from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
+faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팩스 전송단가를 확인합니다.

@@ -15,6 +15,7 @@ from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
+faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 try:
     print("=" * 15 + " 연동회원 가입여부 확인 " + "=" * 15)
