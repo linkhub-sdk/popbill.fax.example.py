@@ -19,7 +19,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송 결과를 확인합니다.
-- 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.1 GetFaxDetail (전송내역 및 전송상태 확인)을 참조하시기 바랍니다.
+- https://docs.popbill.com/fax/python/api#GetFaxResult
 '''
 
 try:

@@ -21,7 +21,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 팩스를 재전송합니다.
 - 접수일로부터 60일이 경과되지 않은 팩스전송건만 재전송할 수 있습니다.
 - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
-- 팩스전송 문서 파일포맷 안내 : http://blog.linkhub.co.kr/2561
+- https://docs.popbill.com/fax/python/api#ResendFAX
 '''
 
 try:

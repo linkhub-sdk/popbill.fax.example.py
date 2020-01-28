@@ -20,6 +20,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 팩스전송요청시 할당한 전송요청번호(requestNum)로 팩스 예약전송건을 취소합니다.
 - 예약전송 취소는 예약전송시간 10분전까지 가능합니다.
+- https://docs.popbill.com/fax/python/api#CancelReserveRN
 '''
 
 try:

@@ -18,7 +18,8 @@ faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
-연동회원의 회사정보를 수정합니다
+연동회원의 회사정보를 수정합니다.
+- https://docs.popbill.com/fax/python/api#UpdateCorpInfo
 '''
 
 try:

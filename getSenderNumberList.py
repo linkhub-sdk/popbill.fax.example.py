@@ -19,6 +19,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 등록된 팩스 발신번호 목록을 확인합니다.
+- https://docs.popbill.com/fax/python/api#GetSenderNumberList
 '''
 
 try:

@@ -19,6 +19,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 검색조건을 사용하여 팩스전송 내역을 조회합니다.
+- https://docs.popbill.com/fax/python/api#Search
 '''
 
 try:

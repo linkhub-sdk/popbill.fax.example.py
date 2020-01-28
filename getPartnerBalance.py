@@ -17,6 +17,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 파트너의 잔여포인트를 확인합니다.
 - 과금방식이 연동과금인 경우 연동회원 잔여포인트(GetBalance API)를 이용하시기 바랍니다.
+- https://docs.popbill.com/fax/python/api#GetPartnerBalance
 '''
 
 try:

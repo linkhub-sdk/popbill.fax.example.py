@@ -19,7 +19,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팩스전송요청시 할당한 전송요청번호(requestNum)으로 전송결과를 확인합니다.
-- 응답항목에 대한 자세한 사항은 "[팩스 API 연동매뉴얼] >  3.3.2 GetFaxDetailRN (전송내역 및 전송상태 확인 - 요청번호 할당)을 참조하시기 바랍니다.
+- https://docs.popbill.com/fax/python/api#GetFaxResultRN
 '''
 
 try:

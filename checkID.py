@@ -17,6 +17,11 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
+'''
+팝빌회원 아이디 중복여부를 확인합니다.
+- https://docs.popbill.com/fax/python/api#CheckID
+'''
+
 try:
     print("=" * 15 + " 팝빌회원 아이디 중복확인 " + "=" * 15)
 

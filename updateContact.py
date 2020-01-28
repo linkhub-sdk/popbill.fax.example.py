@@ -19,6 +19,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 연동회원의 담당자 정보를 수정합니다.
+- https://docs.popbill.com/fax/python/api#UpdateContact
 '''
 
 try:

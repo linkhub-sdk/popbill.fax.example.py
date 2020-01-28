@@ -19,6 +19,7 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팩스 전송단가를 확인합니다.
+- https://docs.popbill.com/fax/python/api#GetUnitCost
 '''
 
 try:

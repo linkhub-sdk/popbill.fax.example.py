@@ -17,6 +17,11 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
+'''
+사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
+- https://docs.popbill.com/fax/python/api#CheckIsMember
+'''
+
 try:
     print("=" * 15 + " 연동회원 가입여부 확인 " + "=" * 15)
 
