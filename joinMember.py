@@ -13,6 +13,7 @@ from popbill import JoinForm, FaxService, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
+faxService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팝빌 연동회원 가입을 요청합니다.

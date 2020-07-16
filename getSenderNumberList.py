@@ -16,6 +16,7 @@ from popbill import FaxService, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
+faxService.UseStaticIP = testValue.UseStaticIP
 
 '''
 등록된 팩스 발신번호 목록을 확인합니다.

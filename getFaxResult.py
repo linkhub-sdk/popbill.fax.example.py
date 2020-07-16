@@ -16,6 +16,7 @@ from popbill import FaxService, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
+faxService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팩스 전송요청시 반환받은 접수번호(receiptNum)을 사용하여 팩스전송 결과를 확인합니다.

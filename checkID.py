@@ -16,6 +16,7 @@ from popbill import FaxService, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
+faxService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팝빌회원 아이디 중복여부를 확인합니다.

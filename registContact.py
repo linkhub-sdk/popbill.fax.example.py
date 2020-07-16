@@ -16,6 +16,7 @@ from popbill import ContactInfo, FaxService, PopbillException
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
+faxService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팝빌 연동회원 사업자의 담당자 정보(팝빌 로그인 계정)를 추가합니다.

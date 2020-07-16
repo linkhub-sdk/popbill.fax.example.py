@@ -4,7 +4,7 @@
  팝빌 팩스 API Python SDK Example
 
  - Python SDK 연동환경 설정방법 안내 : https://docs.popbill.com/fax/tutorial/python
- - 업데이트 일자 : 2020-01-28
+ - 업데이트 일자 : 2020-07-16
  - 연동 기술지원 연락처 : 1600-9854 / 070-4304-2991~2
  - 연동 기술지원 이메일 : code@linkhub.co.kr
 
@@ -31,3 +31,6 @@ testUserID = "testkorea"
 
 # 발급토큰 IP 제한기능 활성화 여부 (권장-True)
 IPRestrictOnOff = True
+
+# 팝빌 API 서비스 고정 IP 사용여부(GA), true-사용, false-미사용, 기본값(false)
+UseStaticIP = False
