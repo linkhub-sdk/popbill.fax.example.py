@@ -37,6 +37,7 @@ try:
         print("    number (발신번호) : %s" % f.number)
         print("    representYN (대표번호 지정여부) : %s" % f.representYN)
         print("    state (등록상태) : %s" % f.state)
+        print("    memo (메모) : %s" % f.memo)
         i += 1
 
 except PopbillException as PE:
