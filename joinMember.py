@@ -30,8 +30,9 @@ try:
         # 아이디 (6자 이상 50자 미만)
         ID="join_id_test",
 
-        # 비밀번호 (6자 이상 20자 미만)
-        PWD="this_is_password",
+        # 비밀번호 (8자 이상 20자 미만)
+        # 영문, 숫자, 특수문자 조합
+        Password="password123!@#",
 
         # 사업자번호 "-" 제외
         CorpNum="0000000000",
