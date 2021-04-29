@@ -14,6 +14,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
+faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 파트너 포인트충전 팝업 URL을 반환합니다.

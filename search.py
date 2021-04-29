@@ -17,6 +17,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
+faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 검색조건을 사용하여 팩스전송 내역을 조회합니다.
@@ -32,10 +33,10 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20200701"
+    SDate = "20210401"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20201231"
+    EDate = "20210430"
 
     # 팩스전송상태 배열, 1(대기), 2(성공), 3(실패), 4(취소)
     State = ["1", "2", "3", "4"]

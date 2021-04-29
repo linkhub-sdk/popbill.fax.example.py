@@ -17,6 +17,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
+faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.

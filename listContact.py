@@ -17,6 +17,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
+faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 연동회원의 담당자 목록을 확인합니다.
@@ -44,6 +45,6 @@ try:
         print("regDT (등록일시) : %s" % info.regDT)
         print("searchAllAllowYN (회사 조회권한) : %s" % info.searchAllAllowYN)
         print("mgrYN (관리자 여부): %s" % info.mgrYN)
-        print("state (상태): %s" % info.state) + '\n'
+        print("state (상태): %s" % info.state + '\n')
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

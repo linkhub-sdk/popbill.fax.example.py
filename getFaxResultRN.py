@@ -17,6 +17,7 @@ faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
 faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
+faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팩스전송요청시 할당한 전송요청번호(requestNum)으로 전송결과를 확인합니다.
@@ -55,6 +56,6 @@ try:
         print("    receiptNum (접수번호) : %s" % f.receiptNum)
         print("    requestNum (요청번호) : %s" % f.requestNum)
         print("    chargePageCnt (과금 페이지수) : %s" % f.chargePageCnt)
-        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % f.tiffFileSize) + '\n'
+        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % f.tiffFileSize + '\n')
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
