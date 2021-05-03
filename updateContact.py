@@ -55,10 +55,7 @@ try:
         email="dev@linkhub.co.kr",
 
         #담당자 조회권한, 1(개인) 2(읽기) 3(회사)
-        searchRole=1,
-
-        # 관리자 권한여부, True(관리자), False(사용자)
-        mgrYN=True
+        searchRole=1
     )
 
     result = faxService.updateContact(CorpNum, updateInfo, UserID)
