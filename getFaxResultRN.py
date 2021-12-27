@@ -41,6 +41,7 @@ try:
         print("    sendNum (발신번호) : %s" % f.sendNum)
         print("    senderName (발신자명) : %s" % f.senderName)
         print("    receiveNum (수신번호) : %s" % f.receiveNum)
+        print("    receiveNumType (수신번호 유형) : %s" % f.receiveNumType)
         print("    receiveName (수신자명) : %s" % f.receiveName)
         print("    title (팩스제목) : %s" % f.title)
         print("    sendPageCnt (전체 페이지수) : %s" % f.sendPageCnt)
