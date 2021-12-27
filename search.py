@@ -34,10 +34,10 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20210401"
+    SDate = "20211201"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20210430"
+    EDate = "20211230"
 
     # 팩스전송상태 배열, 1(대기), 2(성공), 3(실패), 4(취소)
     State = ["1", "2", "3", "4"]
@@ -73,6 +73,7 @@ try:
         print("    sendNum (발신번호) : %s" % info.sendNum)
         print("    senderName (발신자명) : %s" % info.senderName)
         print("    receiveNum (수신번호) : %s" % info.receiveNum)
+        print("    receiveNumType (수신번호 유형) : %s" % info.receiveNumType)
         print("    receiveName (수신자명) : %s" % info.receiveName)
         print("    title (팩스제목) : %s" % info.title)
         print("    sendPageCnt (전체 페이지수) : %s" % info.sendPageCnt)
