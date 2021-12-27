@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 예약 팩스전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20190117-001"
+    requestNum = "20211201-001"
 
     result = faxService.cancelReserveRN(CorpNum, requestNum)
 

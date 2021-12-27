@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20190128-001"
+    requestNum = "20211201-001"
 
     resultList = faxService.getFaxResultRN(CorpNum, requestNum)
 
