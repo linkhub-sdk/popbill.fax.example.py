@@ -30,8 +30,6 @@ try:
 
     CorpNum = testValue.testCorpNum
 
-    UserID = testValue.testUserID
-
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
     SDate = "20220701"
@@ -65,7 +63,7 @@ try:
     Order = "D"
 
     response = faxService.search(CorpNum, SDate, EDate, State, ReserveYN, SenderOnly,
-                                 Page, PerPage, Order, UserID)
+                                 Page, PerPage, Order)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
