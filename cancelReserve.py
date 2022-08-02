@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 예약 팩스전송요청시 발급받은 접수번호(receiptNum)
-    receiptNum = "018120517184000001"
+    receiptNum = "022072817004300001"
 
     result = faxService.cancelReserve(CorpNum, receiptNum)
 

@@ -37,7 +37,7 @@ try:
     UserID = testValue.testUserID
 
     # 원본 팩스 전송시 할당한 전송요청번호
-    OrgRequestNum = '20210129100253'
+    OrgRequestNum = ''
 
     # 발신번호, 공백처리시 기존전송정보로 재전송
     Sender = ''
