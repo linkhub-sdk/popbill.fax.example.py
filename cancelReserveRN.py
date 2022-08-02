@@ -20,7 +20,7 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-팩스전송요청시 할당한 전송요청번호(requestNum)로 팩스 예약전송건을 취소합니다.
+파트너가 할당한 전송요청 번호를 통해 예약접수된 팩스 전송을 취소합니다. (예약시간 10분 전까지 가능)
 - 예약전송 취소는 예약전송시간 10분전까지 가능합니다.
 - https://docs.popbill.com/fax/python/api#CancelReserveRN
 '''
@@ -32,7 +32,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 예약 팩스전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20211201-001"
+    requestNum = ""
 
     result = faxService.cancelReserveRN(CorpNum, requestNum)
 

@@ -20,9 +20,10 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-[대량전송] 전송요청번호(requestNum)을 할당한 팩스를 재전송합니다.
-- 접수일로부터 60일이 경과된 경우 재전송할 수 없습니다.
+파트너가 할당한 전송요청번호를 통해 다수의 수신자에게 팩스를 재전송합니다. (최대 1,000건)
+- 발신/수신 정보 미입력시 기존과 동일한 정보로 팩스가 전송되고, 접수일 기준 최대 60일이 경과되지 않는 건만 재전송이 가능합니다.
 - 팩스 재전송 요청시 포인트가 차감됩니다. (전송실패시 환불처리)
+- 변환실패 사유로 전송실패한 팩스 접수건은 재전송이 불가합니다.
 - https://docs.popbill.com/fax/python/api#ResendFAXRN_Multi
 '''
 
@@ -39,7 +40,7 @@ try:
     OrgRequestNum = '20210129100253'
 
     # 발신번호, 공백처리시 기존전송정보로 재전송
-    Sender = '010111222'
+    Sender = ''
 
     # 발신자명, 공백처리시 기존전송정보로 재전송
     SenderName = '발신자명'
@@ -58,9 +59,9 @@ try:
     Receivers = [] # 수신정보 배열, 최대 1000개
     for x in range(0, 10):
         Receivers.append(
-        	FaxReceiver(
-                receiveNum = '010111222', # 수신번호
-            	receiveName = '수신자명'+str(x), # 수신자명
+            FaxReceiver(
+                receiveNum = '', # 수신번호
+                receiveName = '수신자명'+str(x), # 수신자명
             )
         )
     """

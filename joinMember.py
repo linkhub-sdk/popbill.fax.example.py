@@ -17,7 +17,7 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-팝빌 연동회원 가입을 요청합니다.
+사용자를 연동회원으로 가입처리합니다.
 - https://docs.popbill.com/fax/python/api#JoinMember
 '''
 
@@ -56,16 +56,10 @@ try:
         ContactName="담당자성명",
 
         # 담당자 이메일주소 (최대 100자)
-        ContactEmail="test@test.com",
+        ContactEmail="",
 
         # 담당자 연락처 (최대 20자)
-        ContactTEL="070-111-222",
-
-        # 담당자 휴대폰번호 (최대 20자)
-        ContactHP="010-111-222",
-
-        # 담당자 팩스번호 (최대 20자)
-        ContactFAX="070-111-222"
+        ContactTEL=""
     )
 
     result = faxService.joinMember(newMember)

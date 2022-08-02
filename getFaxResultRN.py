@@ -20,7 +20,7 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-팩스전송요청시 할당한 전송요청번호(requestNum)으로 전송결과를 확인합니다.
+파트너가 할당한 전송요청 번호를 통해 팩스 전송상태 및 결과를 확인합니다.
 - https://docs.popbill.com/fax/python/api#GetFaxResultRN
 '''
 
@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 팩스전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20211201-001"
+    requestNum = ""
 
     resultList = faxService.getFaxResultRN(CorpNum, requestNum)
 

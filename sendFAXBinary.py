@@ -20,7 +20,7 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-전송할 파일의 바이너리 데이터로 팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+전송할 파일의 바이너리 데이터로 팩스 1건을 팝빌에 접수합니다. (최대 전송파일 개수: 20개)
 - https://docs.popbill.com/fax/python/api#SendFAXBinary
 '''
 
@@ -34,13 +34,13 @@ try:
     UserID = testValue.testUserID
 
     # 발신번호
-    Sender = "070111222"
+    Sender = ""
 
     # 발신자명
     SenderName = "발신자명"
 
     # 수신번호
-    Receiver = "070222111"
+    Receiver = ""
 
     # 수신자명
     ReceiverName = "수신자명"
@@ -56,7 +56,7 @@ try:
         )
 
     # 예약전송시간, 작성형식:yyyyMMddHHmmss, 공백 기재시 즉시전송
-    ReserveDT = "20210428140000"
+    ReserveDT = ""
 
     # 광고팩스 전송여부
     AdsYN = True

@@ -20,7 +20,7 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-팩스를 전송합니다. (전송할 파일 개수는 최대 20개까지 가능)
+팩스 1건을 전송합니다. (최대 전송파일 개수: 20개)
 - https://docs.popbill.com/fax/python/api#SendFAX
 '''
 
@@ -34,13 +34,13 @@ try:
     UserID = testValue.testUserID
 
     # 발신번호
-    Sender = '07043042992'
+    Sender = ''
 
     # 발신자명
     SenderName = '발신자명'
 
     # 수신번호
-    Receiver = '010111222'
+    Receiver = ''
 
     # 수신자명
     ReceiverName = '수신자명'

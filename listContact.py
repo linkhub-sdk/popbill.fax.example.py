@@ -20,7 +20,7 @@ faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-연동회원의 담당자 목록을 확인합니다.
+연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 목록을 확인합니다.
 - https://docs.popbill.com/fax/python/api#ListContact
 '''
 
@@ -39,8 +39,6 @@ try:
         print("id (아이디) : %s" % info.id)
         print("personName (담당자 성명) : %s" % info.personName)
         print("email (담당자 이메일) : %s" % info.email)
-        print("hp (담당자 휴대폰번호) : %s" % info.hp)
-        print("fax (담당자 팩스번호) : %s" % info.fax)
         print("tel (담당자 연락처) : %s" % info.tel)
         print("regDT (등록일시) : %s" % info.regDT)
         print("searchRole (담당자 조회권한) : %s" % info.searchRole)
