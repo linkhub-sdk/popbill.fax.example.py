@@ -30,9 +30,6 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 회사정보
     corpInfo = CorpInfo(
 
@@ -52,7 +49,7 @@ try:
         bizClass="종목"
     )
 
-    result = faxService.updateCorpInfo(CorpNum, corpInfo, UserID)
+    result = faxService.updateCorpInfo(CorpNum, corpInfo)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
 except PopbillException as PE:

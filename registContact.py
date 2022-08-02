@@ -29,9 +29,6 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 담당자 정보
     newContact = ContactInfo(
 
@@ -55,7 +52,7 @@ try:
         searchRole=1
     )
 
-    result = faxService.registContact(CorpNum, newContact, UserID)
+    result = faxService.registContact(CorpNum, newContact)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
 
