@@ -30,7 +30,12 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    unitCost = faxService.getUnitCost(CorpNum)
+    # 수신번호 유형 : "일반" / "지능" 중 택 1
+    # └ 일반망 : 지능망을 제외한 번호
+    # └ 지능망 : 030*, 050*, 070*, 080*, 대표번호
+    receiveNumType = "지능"
+
+    unitCost = faxService.getUnitCost(CorpNum, receiveNumType)
 
     print("전송단가 : %f" % unitCost)
 
