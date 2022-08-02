@@ -86,7 +86,6 @@ try:
         print("    sendPageCnt (전체 페이지수) : %s" % info.sendPageCnt)
         print("    successPageCnt (성공 페이지수) : %s" % info.successPageCnt)
         print("    failPageCnt (실패 페이지수) : %s" % info.failPageCnt)
-        print("    refundPageCnt (환불 페이지수) : %s" % info.refundPageCnt)
         print("    cancelPageCnt (취소 페이지수) : %s" % info.cancelPageCnt)
         print("    reserveDT (예약일시) : %s" % info.reserveDT)
         print("    receiptDT (접수일시) : %s" % info.receiptDT)
@@ -95,7 +94,9 @@ try:
         print("    fileNames (전송 파일명 리스트) : %s" % info.fileNames)
         print("    receiptNum (접수번호) : %s" % info.receiptNum)
         print("    requestNum (요청번호) : %s" % info.requestNum)
+        print("    interOPRefKey (파트너 지정키) : %s" % info.interOPRefKey)
         print("    chargePageCnt (과금 페이지수) : %s" % info.chargePageCnt)
+        print("    refundPageCnt (환불 페이지수) : %s" % info.refundPageCnt)
         print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % info.tiffFileSize + '\n')
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

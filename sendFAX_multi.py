@@ -55,8 +55,9 @@ try:
     for x in range(0, 5):
         Receivers.append(
             FaxReceiver(
-                receiveNum='',  # 수신번호
-                receiveName='수신자명' + str(x),  # 수신자명
+                receiveNum = '',  # 수신번호
+                receiveName = '수신자명' + str(x),  # 수신자명
+                interOPRefKey = '20220803-' + str(x) # 파트너 지정키
             )
         )
 
