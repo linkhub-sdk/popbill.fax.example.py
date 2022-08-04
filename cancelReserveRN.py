@@ -21,7 +21,6 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 파트너가 할당한 전송요청 번호를 통해 예약접수된 팩스 전송을 취소합니다. (예약시간 10분 전까지 가능)
-- 예약전송 취소는 예약전송시간 10분전까지 가능합니다.
 - https://docs.popbill.com/fax/python/api#CancelReserveRN
 '''
 

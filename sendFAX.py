@@ -51,7 +51,9 @@ try:
     # 예약전송일시, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
     ReserveDT = ''
 
-    # 광고팩스 전송여부
+    # 광고팩스 전송여부 , true / false 중 택 1
+    # └ true = 광고 , false = 일반
+    # └ 미입력 시 기본값 false 처리 , true / false 중 택 1
     AdsYN = False
 
     # 팩스제목

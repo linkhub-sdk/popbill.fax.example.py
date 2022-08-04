@@ -42,7 +42,9 @@ try:
     # 파일경로 (해당파일에 읽기 권한이 설정되어 있어야 함. 최대 20개)
     FilePath = ['test.jpeg', 'test2.jpeg']
 
-    # 광고팩스 전송여부
+    # 광고팩스 전송여부 , true / false 중 택 1
+    # └ true = 광고 , false = 일반
+    # └ 미입력 시 기본값 false 처리 , true / false 중 택 1
     AdsYN = False
 
     # 예약전송시간, None처리시 즉시전송, 작성형태 'yyyyMMddHHmmss'
