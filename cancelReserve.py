@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌에서 반환받은 접수번호를 통해 예약접수된 팩스 전송을 취소합니다. (예약시간 10분 전까지 가능)
-- https://docs.popbill.com/fax/python/api#CancelReserve
+- https://developers.popbill.com/reference/fax/python/api/send#CancelReserve
 '''
 
 try:

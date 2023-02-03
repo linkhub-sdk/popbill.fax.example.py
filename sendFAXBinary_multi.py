@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 전송할 파일의 바이너리 데이터로 다수의 수신자에게 팩스를 전송하기 위해 팝빌에 접수합니다. (최대 전송파일 개수 : 20개) (최대 1,000건)
-- https://docs.popbill.com/fax/python/api#SendFAXBinary_multi
+- https://developers.popbill.com/reference/fax/python/api/send#SendFAXBinary_multi
 '''
 
 try:

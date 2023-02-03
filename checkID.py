@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌회원 아이디 중복여부를 확인합니다.
-- https://docs.popbill.com/fax/python/api#CheckID
+- https://developers.popbill.com/reference/fax/python/api/member#CheckID
 '''
 
 try:

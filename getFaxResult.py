@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌에서 반환 받은 접수번호를 통해 팩스 전송상태 및 결과를 확인합니다.
-- https://docs.popbill.com/fax/python/api#GetFaxResult
+- https://developers.popbill.com/reference/fax/python/api/info#GetFaxResult
 '''
 
 try:

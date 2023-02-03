@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 연동회원의 팩스 API 서비스 과금정보를 확인합니다.
-- https://docs.popbill.com/fax/python/api#GetChargeInfo
+- https://developers.popbill.com/reference/fax/python/api/point#GetChargeInfo
 '''
 
 try:

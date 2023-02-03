@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 동일한 팩스파일을 다수의 수신자에게 전송하기 위해 팝빌에 접수합니다. (최대 전송파일 개수 : 20개) (최대 1,000건)
-- https://docs.popbill.com/fax/python/api#SendFAX_Multi
+- https://developers.popbill.com/reference/fax/python/api/send#SendFAX_Multi
 '''
 
 try:

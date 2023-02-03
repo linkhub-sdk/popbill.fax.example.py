@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌에 등록한 연동회원의 팩스 발신번호 목록을 확인합니다.
-- https://docs.popbill.com/fax/python/api#GetSenderNumberList
+- https://developers.popbill.com/reference/fax/python/api/sendnum#GetSenderNumberList
 '''
 
 try:

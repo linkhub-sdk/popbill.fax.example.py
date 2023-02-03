@@ -21,7 +21,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팩스 1건을 전송합니다. (최대 전송파일 개수: 20개)
-- https://docs.popbill.com/fax/python/api#SendFAX
+- https://developers.popbill.com/reference/fax/python/api/send#SendFAX
 '''
 
 try:
