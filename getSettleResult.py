@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 연동회원 포인트 무통장 입금신청내역 1건을 확인합니다.
 - https://developers.popbill.com/reference/fax/python/api/point#GetSettleResult
-'''
+"""
 
 try:
     print("=" * 15 + " 무통장 입금신청 정보 확인 " + "=" * 15)
@@ -38,16 +38,16 @@ try:
 
     paymentHistory = faxService.getPaymentHistory(CorpNum, SettleCode, UserID)
 
-    print("결제 내용 ('포인트' / '정액제' / '미수금' 중 반환) : %s" %paymentHistory.productType)
-    print("정액제 상품명 : %s" %paymentHistory.productName)
-    print("결제유형 ('무통장' / '신용카드' / '실시간계좌이체' 중 반환) : %s" %paymentHistory.settleType)
-    print("담당자명 : %s" %paymentHistory.settlerName)
-    print("담당자메일 : %s" %paymentHistory.settlerEmail)
-    print("결제금액 : %s" %paymentHistory.settleCost)
-    print("충전포인트 : %s" %paymentHistory.settlePoint)
-    print("결제상태 (1 / 2 / 3 / 4 / 5 중 반환) : %s" %paymentHistory.settleState)
-    print("등록일시 (형식 : yyyyMMddHHmmss) : %s" %paymentHistory.regDT)
-    print("상태일시 (형식 : yyyyMMddHHmmss) : %s" %paymentHistory.stateDT)
+    print("결제 내용 ('포인트' / '정액제' / '미수금' 중 반환) : %s" % paymentHistory.productType)
+    print("정액제 상품명 : %s" % paymentHistory.productName)
+    print("결제유형 ('무통장' / '신용카드' / '실시간계좌이체' 중 반환) : %s" % paymentHistory.settleType)
+    print("담당자명 : %s" % paymentHistory.settlerName)
+    print("담당자메일 : %s" % paymentHistory.settlerEmail)
+    print("결제금액 : %s" % paymentHistory.settleCost)
+    print("충전포인트 : %s" % paymentHistory.settlePoint)
+    print("결제상태 (1 / 2 / 3 / 4 / 5 중 반환) : %s" % paymentHistory.settleState)
+    print("등록일시 (형식 : yyyyMMddHHmmss) : %s" % paymentHistory.regDT)
+    print("상태일시 (형식 : yyyyMMddHHmmss) : %s" % paymentHistory.stateDT)
 
 
 except PopbillException as PE:

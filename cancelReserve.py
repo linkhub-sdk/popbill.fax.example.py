@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팝빌에서 반환받은 접수번호를 통해 예약접수된 팩스 전송을 취소합니다. (예약시간 10분 전까지 가능)
 - https://developers.popbill.com/reference/fax/python/api/send#CancelReserve
-'''
+"""
 
 try:
     print("=" * 15 + " 예약팩스 전송취소 " + "=" * 15)

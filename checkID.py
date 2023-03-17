@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팝빌회원 아이디 중복여부를 확인합니다.
 - https://developers.popbill.com/reference/fax/python/api/member#CheckID
-'''
+"""
 
 try:
     print("=" * 15 + " 팝빌회원 아이디 중복확인 " + "=" * 15)

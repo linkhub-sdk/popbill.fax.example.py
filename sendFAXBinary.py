@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 전송할 파일의 바이너리 데이터로 팩스 1건을 팝빌에 접수합니다. (최대 전송파일 개수: 20개)
 - https://developers.popbill.com/reference/fax/python/api/send#SendFAXBinary
-'''
+"""
 
 try:
     print("=" * 15 + " 팩스전송. 1파일 동보전송 " + "=" * 15)
@@ -45,13 +45,12 @@ try:
     # 수신자명
     ReceiverName = "수신자명"
 
-    #전송 파일 객체정보 리스트, 최대 20개
+    # 전송 파일 객체정보 리스트, 최대 20개
     FileDatas = []
     with open("./test.jpeg", "rb") as f:
         FileDatas.append(
             FileData(
-                fileName='test.jpeg', #전송 파일명
-                fileData=f.read()    #전송 파일 바이너리 데이터
+                fileName="test.jpeg", fileData=f.read()  # 전송 파일명  # 전송 파일 바이너리 데이터
             )
         )
 
@@ -71,8 +70,19 @@ try:
     # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     RequestNum = ""
 
-    receiptNum = faxService.sendFaxBinary(CorpNum, Sender, Receiver, ReceiverName,
-                                    FileDatas, ReserveDT, UserID, SenderName, AdsYN, Title, RequestNum)
+    receiptNum = faxService.sendFaxBinary(
+        CorpNum,
+        Sender,
+        Receiver,
+        ReceiverName,
+        FileDatas,
+        ReserveDT,
+        UserID,
+        SenderName,
+        AdsYN,
+        Title,
+        RequestNum,
+    )
 
     print("receiptNum (접수번호) : %s" % receiptNum)
 

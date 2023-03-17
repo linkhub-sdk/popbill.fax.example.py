@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,11 +19,11 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 검색조건을 사용하여 팩스전송 내역을 조회합니다. (조회기간 단위 : 최대 2개월)
 - 팩스 접수일시로부터 2개월 이내 접수건만 조회할 수 있습니다.
 - https://developers.popbill.com/reference/fax/python/api/info#Search
-'''
+"""
 
 try:
     print("=" * 15 + " 팩스 전송내역 조회 " + "=" * 15)
@@ -62,8 +62,9 @@ try:
     # 정렬방향, D-내림차순, A-오름차순
     Order = "D"
 
-    response = faxService.search(CorpNum, SDate, EDate, State, ReserveYN, SenderOnly,
-                                 Page, PerPage, Order)
+    response = faxService.search(
+        CorpNum, SDate, EDate, State, ReserveYN, SenderOnly, Page, PerPage, Order
+    )
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
@@ -95,6 +96,6 @@ try:
         print("    interOPRefKey (파트너 지정키) : %s" % info.interOPRefKey)
         print("    chargePageCnt (과금 페이지수) : %s" % info.chargePageCnt)
         print("    refundPageCnt (환불 페이지수) : %s" % info.refundPageCnt)
-        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % info.tiffFileSize + '\n')
+        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % info.tiffFileSize + "\n")
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

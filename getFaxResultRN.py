@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 파트너가 할당한 전송요청 번호를 통해 팩스 전송상태 및 결과를 확인합니다.
 - https://developers.popbill.com/reference/fax/python/api/info#GetFaxResultRN
-'''
+"""
 
 try:
     print("=" * 15 + " 팩스전송 내역 및 전송상태 확인 " + "=" * 15)
@@ -58,6 +58,6 @@ try:
         print("    interOPRefKey (파트너 지정키) : %s" % f.interOPRefKey)
         print("    chargePageCnt (과금 페이지수) : %s" % f.chargePageCnt)
         print("    refundPageCnt (환불 페이지수) : %s" % f.refundPageCnt)
-        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % f.tiffFileSize + '\n')
+        print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % f.tiffFileSize + "\n")
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

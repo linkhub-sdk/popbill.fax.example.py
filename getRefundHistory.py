@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 연동회원의 포인트 환불신청내역을 확인합니다.
 - https://developers.popbill.com/reference/fax/python/api/point#GetRefundHistory
-'''
+"""
 
 try:
     print("=" * 15 + " 환불 신청내역 확인 " + "=" * 15)
@@ -54,8 +54,8 @@ try:
         print("accountBank (환불계좌 은행명) : %s" % refundHistory.accountBank)
         print("accountNum (환불계좌번호) : %s" % refundHistory.accountNum)
         print("accountName (환불계좌 예금주명) : %s" % refundHistory.accountName)
-        print("state (상태) : %s" %refundHistory.state)
-        print("reason (환불사유) : %s" %refundHistory.reason)
+        print("state (상태) : %s" % refundHistory.state)
+        print("reason (환불사유) : %s" % refundHistory.reason)
         print("*" * 50)
 
 except PopbillException as PE:

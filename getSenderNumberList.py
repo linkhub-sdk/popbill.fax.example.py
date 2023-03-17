@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팝빌에 등록한 연동회원의 팩스 발신번호 목록을 확인합니다.
 - https://developers.popbill.com/reference/fax/python/api/sendnum#GetSenderNumberList
-'''
+"""
 
 try:
     print("=" * 15 + " 팩스전송 발신번호 목록 확인 " + "=" * 15)

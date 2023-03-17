@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ faxService.IPRestrictOnOff = testValue.IPRestrictOnOff
 faxService.UseStaticIP = testValue.UseStaticIP
 faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팩스 전송단가를 확인합니다.
 - https://developers.popbill.com/reference/fax/python/api/point#GetUnitCost
-'''
+"""
 
 try:
     print("=" * 15 + " 팩스 전송단가 확인 " + "=" * 15)
