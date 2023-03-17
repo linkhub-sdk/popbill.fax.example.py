@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # code for console Encoding difference. Dont' mind on it
-import sys
 import imp
+import sys
 
 imp.reload(sys)
 try:
@@ -10,7 +10,6 @@ except Exception as E:
     pass
 
 import testValue
-
 from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
@@ -46,7 +45,18 @@ try:
     UserID = testValue.testUserID
 
     paymentHistoryResult = faxService.getPaymentHistory(
-        CorpNum, SDate, EDate, Page, PerPage, UserID
+        # 팝빌회원 사업자번호
+        CorpNum,
+        #   조회 기간의 시작일자
+        SDate,
+        #  조회 기간의 종료일자
+        EDate,
+        #  목록 페이지번호
+        Page,
+        #  페이지당 표시할 목록 개수
+        PerPage,
+        # 팝빌회원 아이디
+        UserID,
     )
 
     print(" code (요청에 대한 응답 상태 코드) : %s" % paymentHistoryResult.code)

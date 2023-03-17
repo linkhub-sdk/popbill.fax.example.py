@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # code for console Encoding difference. Dont' mind on it
-import sys
 import imp
+import sys
 
 imp.reload(sys)
 try:
@@ -10,7 +10,6 @@ except Exception as E:
     pass
 
 import testValue
-
 from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
@@ -38,16 +37,16 @@ try:
 
     paymentHistory = faxService.getPaymentHistory(CorpNum, SettleCode, UserID)
 
-    print("결제 내용 ('포인트' / '정액제' / '미수금' 중 반환) : %s" % paymentHistory.productType)
+    print("결제 내용 : %s" % paymentHistory.productType)
     print("정액제 상품명 : %s" % paymentHistory.productName)
-    print("결제유형 ('무통장' / '신용카드' / '실시간계좌이체' 중 반환) : %s" % paymentHistory.settleType)
+    print("결제유형 : %s" % paymentHistory.settleType)
     print("담당자명 : %s" % paymentHistory.settlerName)
     print("담당자메일 : %s" % paymentHistory.settlerEmail)
     print("결제금액 : %s" % paymentHistory.settleCost)
     print("충전포인트 : %s" % paymentHistory.settlePoint)
-    print("결제상태 (1 / 2 / 3 / 4 / 5 중 반환) : %s" % paymentHistory.settleState)
-    print("등록일시 (형식 : yyyyMMddHHmmss) : %s" % paymentHistory.regDT)
-    print("상태일시 (형식 : yyyyMMddHHmmss) : %s" % paymentHistory.stateDT)
+    print("결제상태 : %s" % paymentHistory.settleState)
+    print("등록일시 : %s" % paymentHistory.regDT)
+    print("상태일시 : %s" % paymentHistory.stateDT)
 
 
 except PopbillException as PE:

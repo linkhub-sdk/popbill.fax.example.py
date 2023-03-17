@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # code for console Encoding difference. Dont' mind on it
-import sys
 import imp
+import sys
 
 imp.reload(sys)
 try:
@@ -10,7 +10,6 @@ except Exception as E:
     pass
 
 import testValue
-
 from popbill import FaxService, PopbillException, RefundForm
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
@@ -32,12 +31,19 @@ try:
 
     # 환불 신청 객체 정보
     refundForm = RefundForm(
-        contactname="환불신청테스트",
+        # 담당자명
+        contactName="환불신청테스트",
+        # 담당자 연락처
         tel="01077777777",
-        requestpoint="10",
-        accountbank="국민",
-        accountnum="123123123-123",
-        accountname="예금주",
+        # 환불 신청 포인트
+        requestPoint="10",
+        # 은행명
+        accountBank="국민",
+        # 계좌번호
+        accountNum="123123123-123",
+        # 예금주명
+        accountName="예금주",
+        # 환불사유
         reason="테스트 환불 사유",
     )
 
