@@ -44,20 +44,7 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    paymentHistoryResult = faxService.getPaymentHistory(
-        # 팝빌회원 사업자번호
-        CorpNum,
-        #   조회 기간의 시작일자
-        SDate,
-        #  조회 기간의 종료일자
-        EDate,
-        #  목록 페이지번호
-        Page,
-        #  페이지당 표시할 목록 개수
-        PerPage,
-        # 팝빌회원 아이디
-        UserID,
-    )
+    paymentHistoryResult = faxService.getPaymentHistory(CorpNum,SDate,EDate,Page,PerPage,UserID)
 
     print(" code (요청에 대한 응답 상태 코드) : %s" % paymentHistoryResult.code)
     print(" total (총 검색결과 건수) : %s" % paymentHistoryResult.total)

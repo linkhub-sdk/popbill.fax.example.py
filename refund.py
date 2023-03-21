@@ -33,16 +33,22 @@ try:
     refundForm = RefundForm(
         # 담당자명
         contactName="환불신청테스트",
+
         # 담당자 연락처
         tel="01077777777",
+
         # 환불 신청 포인트
         requestPoint="10",
+
         # 은행명
         accountBank="국민",
+
         # 계좌번호
         accountNum="123123123-123",
+
         # 예금주명
         accountName="예금주",
+
         # 환불사유
         reason="테스트 환불 사유",
     )
