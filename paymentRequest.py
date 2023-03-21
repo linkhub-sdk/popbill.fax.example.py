@@ -41,7 +41,7 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    paymentResponse = faxService.getPaymentHistory(CorpNum, paymentForm, UserID)
+    paymentResponse = faxService.paymentRequest(CorpNum, paymentForm, UserID)
 
     print("code (응답코드) : %s" % paymentResponse.code)
     print("message (응답메시지) : %s" % paymentResponse.message)

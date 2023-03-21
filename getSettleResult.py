@@ -29,13 +29,13 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 정산코드 - 팝빌에서 임의 부여하는 값으로 PaymentRequest(연동회원 무통장 입금신청) 호출시 반환되는 값
-    SettleCode = ""
+    # 정산코드
+    SettleCode = "202303070000000052"
 
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    paymentHistory = faxService.getPaymentHistory(CorpNum, SettleCode, UserID)
+    paymentHistory = faxService.getSettleResult(CorpNum, SettleCode, UserID)
 
     print("결제 내용 : %s" % paymentHistory.productType)
     print("정액제 상품명 : %s" % paymentHistory.productName)

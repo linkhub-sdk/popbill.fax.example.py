@@ -40,13 +40,13 @@ try:
 
     refundHistoryResult = faxService.getRefundHistory(CorpNum, Page, PerPage, UserID)
 
-    print(" code (요청에 대한 응답 상태 코드) : %s" % refundHistoryResult.unitCost)
+    print(" code (요청에 대한 응답 상태 코드) : %s" % refundHistoryResult.code)
     print(" total (총 검색결과 건수) : %s" % refundHistoryResult.total)
     print(" perPage (페이지당 검색 개수) : %s" % refundHistoryResult.perPage)
     print(" pageNum (페이지 번호) : %s" % refundHistoryResult.pageNum)
     print(" pageCount (페이지 개수) : %s" % refundHistoryResult.pageCount)
 
-    for refundHistory in refundHistoryResult:
+    for refundHistory in refundHistoryResult.list:
         print("=" * 15 + " RefundHistory (사용내역) " + "=" * 15)
         print("reqDT (신청일시) : %s" % refundHistory.reqDT)
         print("requestPoint (환불 신청포인트) : %s" % refundHistory.requestPoint)

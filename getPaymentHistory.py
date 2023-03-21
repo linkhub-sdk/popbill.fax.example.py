@@ -33,7 +33,7 @@ try:
     SDate = "20230101"
 
     # 조회 기간의 종료일자 (형식 : yyyyMMdd)
-    EDate = "20230107"
+    EDate = "20230131"
 
     # 목록 페이지번호 (기본값 1)
     Page = 1
@@ -60,22 +60,22 @@ try:
     )
 
     print(" code (요청에 대한 응답 상태 코드) : %s" % paymentHistoryResult.code)
-    print(" total (총 검색결과 건수) : %s" % paymentHistoryResult.chargeMethod)
-    print(" perPage (페이지당 검색 개수) : %s" % paymentHistoryResult.chargeMethod)
-    print(" pageNum (페이지 번호) : %s" % paymentHistoryResult.chargeMethod)
-    print(" pageCount (페이지 개수) : %s" % paymentHistoryResult.rateSystem)
+    print(" total (총 검색결과 건수) : %s" % paymentHistoryResult.total)
+    print(" perPage (페이지당 검색 개수) : %s" % paymentHistoryResult.perPage)
+    print(" pageNum (페이지 번호) : %s" % paymentHistoryResult.pageNum)
+    print(" pageCount (페이지 개수) : %s" % paymentHistoryResult.pageCount)
 
-    for paymentHistory in paymentHistoryResult:
-        print(" 결제 내용 : '포인트' / '정액제' / '미수금' 중 반환 %s" % paymentHistory.productType)
-        print(" 정액제 상품명 %s" % paymentHistory.productName)
-        print(" 결제유형 : '무통장' / '신용카드' / '실시간계좌이체' 중 반환 %s" % paymentHistory.settleType)
-        print(" 담당자명 %s" % paymentHistory.settlerName)
-        print(" 담당자메일 %s" % paymentHistory.settlerEmail)
-        print(" 결제금액 %s" % paymentHistory.settleCost)
-        print(" 충전포인트 %s" % paymentHistory.settlePoint)
-        print(" 결제상태 : 1 / 2 / 3 / 4 / 5 중 반환 %s" % paymentHistory.settleState)
-        print(" 등록일시 (형식 : yyyyMMddHHmmss) %s" % paymentHistory.regDT)
-        print(" 상태일시 (형식 : yyyyMMddHHmmss) %s" % paymentHistory.stateDT)
+    for paymentHistory in paymentHistoryResult.list:
+        print(" productType (결제 내용) : %s" % paymentHistory.productType)
+        print(" productName (정액제 상품명) %s" % paymentHistory.productName)
+        print(" settleType (결제유형) : %s" % paymentHistory.settleType)
+        print(" settlerName (담당자명) %s" % paymentHistory.settlerName)
+        print(" settlerEmail (담당자메일) %s" % paymentHistory.settlerEmail)
+        print(" settleCost (결제금액) %s" % paymentHistory.settleCost)
+        print(" settlePoint (충전포인트) %s" % paymentHistory.settlePoint)
+        print(" settleState (결제상태) : %s" % paymentHistory.settleState)
+        print(" regDT (등록일시): %s" % paymentHistory.regDT)
+        print(" stateDT (상태일시): %s" % paymentHistory.stateDT)
         print("*" * 50)
 
 
