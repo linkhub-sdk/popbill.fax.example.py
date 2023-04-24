@@ -60,6 +60,7 @@ try:
 
     print(" code (요청에 대한 응답 상태 코드) : %s" % response.code)
     print(" message (요청에 대한 응답 메시지) : %s" % response.message)
+    print(" refundCode (환불 코드) : %s" % response.refundCode)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
