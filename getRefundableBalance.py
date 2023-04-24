@@ -10,7 +10,7 @@ except Exception as E:
     pass
 
 import testValue
-from popbill import FaxService, PaymentForm, PopbillException
+from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest

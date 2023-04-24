@@ -10,7 +10,7 @@ except Exception as E:
     pass
 
 import testValue
-from popbill import FaxService, PaymentForm, PopbillException
+from popbill import FaxService, PopbillException
 
 faxService = FaxService(testValue.LinkID, testValue.SecretKey)
 faxService.IsTest = testValue.IsTest
@@ -36,7 +36,7 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    response = faxService.QuitREquest(CorpNum, QuitReason, UserID)
+    response = faxService.QuitRequest(CorpNum, QuitReason, UserID)
 
     print(" refundableBalance (환불 가능 포인트) : %s" % response.refundableBalance)
 
