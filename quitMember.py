@@ -22,6 +22,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
  * 가입된 연동회원의 탈퇴를 요청합니다.
  * 회원탈퇴 신청과 동시에 팝빌의 모든 서비스 이용이 불가하며, 관리자를 포함한 모든 담당자 계정도 일괄탈퇴 됩니다.
  * 회원탈퇴로 삭제된 데이터는 복원이 불가능합니다.
+ * 관리자 계정만 회원 탈퇴가 가능합니다.
 - https://developers.popbill.com/reference/fax/python/api/member#QuitMember
 """
 
