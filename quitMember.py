@@ -31,6 +31,7 @@ try:
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
+
     # 회원 탈퇴 사유
     QuitReason = "회원 탈퇴 예제 입니다."
 
