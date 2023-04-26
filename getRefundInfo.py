@@ -29,7 +29,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 환불 신청 코드
+    # 환불코드
     RefundCode = "023040000017"
 
     # 팝빌회원 팝빌 아이디
