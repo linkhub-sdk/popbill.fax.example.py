@@ -38,9 +38,10 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    response = faxService.QuitRequest(CorpNum, QuitReason, UserID)
+    response = faxService.quitMember(CorpNum, QuitReason, UserID)
 
-    print(" refundableBalance (환불 가능 포인트) : %s" % response.refundableBalance)
+    print("code (응답 코드) : %s" % response.code)
+    print("message (응답 메시지) : %s" % response.message)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
