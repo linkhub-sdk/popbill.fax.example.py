@@ -4,7 +4,7 @@
  팝빌 팩스 API Python SDK Example
 
  - Python SDK 연동환경 설정방법 안내 : https://developers.popbill.com/guide/fax/python/getting-started/tutorial
- - 업데이트 일자 : 2023-03-16
+ - 업데이트 일자 : 2023-05-10
  - 연동 기술지원 연락처 : 1600-9854
  - 연동 기술지원 이메일 : code@linkhubcorp.com
 
