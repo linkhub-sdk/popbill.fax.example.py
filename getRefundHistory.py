@@ -47,7 +47,7 @@ try:
     print(" pageCount (페이지 개수) : %s" % refundHistoryResult.pageCount)
 
     for refundHistory in refundHistoryResult.list:
-        print("=" * 15 + " RefundHistory (사용내역) " + "=" * 15)
+        print("=" * 15 + " RefundHistory (환불내역) " + "=" * 15)
         print("reqDT (신청일시) : %s" % refundHistory.reqDT)
         print("requestPoint (환불 신청포인트) : %s" % refundHistory.requestPoint)
         print("accountBank (환불계좌 은행명) : %s" % refundHistory.accountBank)
