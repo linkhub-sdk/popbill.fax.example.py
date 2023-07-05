@@ -51,10 +51,11 @@ try:
     print(" perPage (페이지당 검색 개수) : %s" % paymentHistoryResult.perPage)
     print(" pageNum (페이지 번호) : %s" % paymentHistoryResult.pageNum)
     print(" pageCount (페이지 개수) : %s" % paymentHistoryResult.pageCount)
+    print(" list (결제내역)")
 
     for paymentHistory in paymentHistoryResult.list:
         print(" productType (결제 내용) : %s" % paymentHistory.productType)
-        print(" productName (정액제 상품명) %s" % paymentHistory.productName)
+        print(" productName (결제 상품명) %s" % paymentHistory.productName)
         print(" settleType (결제유형) : %s" % paymentHistory.settleType)
         print(" settlerName (담당자명) %s" % paymentHistory.settlerName)
         print(" settlerEmail (담당자메일) %s" % paymentHistory.settlerEmail)
