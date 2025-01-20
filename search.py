@@ -44,7 +44,7 @@ try:
     # - 미입력 시 전체조회
     State = ["1", "2", "3", "4"]
 
-    # 예약여부 (null, False , True 중 택 1)
+    # 예약여부 (None, False , True 중 택 1)
     # └ None = 전체조회, False = 즉시전송건 조회, True = 예약전송건 조회
     # - 미입력 시 전체조회
     ReserveYN = False
