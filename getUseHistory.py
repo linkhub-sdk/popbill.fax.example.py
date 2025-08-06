@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 연동회원의 포인트 사용내역을 확인합니다.
-- https://developers.popbill.com/reference/fax/python/api/point#GetUseHistory
+- https://developers.popbill.com/reference/fax/python/common-api/point#GetUseHistory
 """
 
 try:
@@ -30,10 +30,10 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 조회 기간의 시작일자 (형식 : yyyyMMdd)
-    SDate = "20230101"
+    SDate = "20250801"
 
     # 조회 기간의 종료일자 (형식 : yyyyMMdd)
-    EDate = "20230131"
+    EDate = "20250831"
 
     # 목록 페이지번호 (기본값 1)
     Page = 1

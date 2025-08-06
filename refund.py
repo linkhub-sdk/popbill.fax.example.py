@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 연동회원 포인트를 환불 신청합니다.
-- https://developers.popbill.com/reference/fax/python/api/point#Refund
+- https://developers.popbill.com/reference/fax/python/common-api/point#Refund
 """
 
 try:
@@ -31,6 +31,7 @@ try:
 
     # 환불 신청 객체 정보
     refundForm = RefundForm(
+
         # 담당자명
         ContactName="환불신청테스트",
 

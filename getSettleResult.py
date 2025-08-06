@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 연동회원 포인트 무통장 입금신청내역 1건을 확인합니다.
-- https://developers.popbill.com/reference/fax/python/api/point#GetSettleResult
+- https://developers.popbill.com/reference/fax/python/common-api/point#GetSettleResult
 """
 
 try:

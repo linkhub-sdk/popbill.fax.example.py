@@ -34,10 +34,10 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20241201"
+    SDate = "20250801"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20241231"
+    EDate = "20250831"
 
     # 전송상태 배열 ("1" , "2" , "3" , "4" 중 선택, 다중 선택 가능)
     # └ 1 = 대기 , 2 = 성공 , 3 = 실패 , 4 = 취소
@@ -75,33 +75,37 @@ try:
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
     print("total (검색결과 건수) : %s " % response.total)
-    print("perPage (페이지당 검색개수) : %s " % response.perPage)
+    print("perPage (페이지당 목록 건수) : %s " % response.perPage)
     print("pageNum (페에지 번호) : %s " % response.pageNum)
     print("pageCount (페이지 개수) : %s \n" % response.pageCount)
 
     for info in response.list:
-        print("    state (전송상태 코드) : %s" % info.state)
-        print("    result (전송결과 코드) : %s" % info.result)
+        print("    state (상태코드) : %s" % info.state)
+        print("    result (결과코드) : %s" % info.result)
         print("    sendNum (발신번호) : %s" % info.sendNum)
         print("    senderName (발신자명) : %s" % info.senderName)
         print("    receiveNum (수신번호) : %s" % info.receiveNum)
         print("    receiveNumType (수신번호 유형) : %s" % info.receiveNumType)
         print("    receiveName (수신자명) : %s" % info.receiveName)
+
         print("    title (팩스제목) : %s" % info.title)
         print("    sendPageCnt (전체 페이지수) : %s" % info.sendPageCnt)
         print("    successPageCnt (성공 페이지수) : %s" % info.successPageCnt)
         print("    failPageCnt (실패 페이지수) : %s" % info.failPageCnt)
         print("    cancelPageCnt (취소 페이지수) : %s" % info.cancelPageCnt)
+
         print("    reserveDT (예약일시) : %s" % info.reserveDT)
         print("    receiptDT (접수일시) : %s" % info.receiptDT)
-        print("    sendDT (발송일시) : %s" % info.sendDT)
+        print("    sendDT (전송일시) : %s" % info.sendDT)
         print("    resultDT (전송결과 수신일시) : %s" % info.resultDT)
         print("    fileNames (전송 파일명 리스트) : %s" % info.fileNames)
+
         print("    receiptNum (접수번호) : %s" % info.receiptNum)
         print("    requestNum (요청번호) : %s" % info.requestNum)
         print("    interOPRefKey (파트너 지정키) : %s" % info.interOPRefKey)
         print("    chargePageCnt (과금 페이지수) : %s" % info.chargePageCnt)
         print("    refundPageCnt (환불 페이지수) : %s" % info.refundPageCnt)
         print("    tiffFileSize (변환파일용랑(단위 : byte)) : %s" % info.tiffFileSize + "\n")
+        
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

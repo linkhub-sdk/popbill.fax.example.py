@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 팩스 전송단가를 확인합니다.
-- https://developers.popbill.com/reference/fax/python/api/point#GetUnitCost
+- https://developers.popbill.com/reference/fax/python/common-api/point#GetUnitCost
 """
 
 try:

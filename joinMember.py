@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 사용자를 연동회원으로 가입처리합니다.
-- https://developers.popbill.com/reference/fax/python/api/member#JoinMember
+- https://developers.popbill.com/reference/fax/python/common-api/member#JoinMember
 """
 
 try:
@@ -28,33 +28,44 @@ try:
 
     # 회원정보
     newMember = JoinForm(
-        # 아이디 (6자 이상 50자 미만)
+
+        # 아이디
         ID="join_id_test",
-        # 비밀번호 (8자 이상 20자 미만)
-        # 영문, 숫자, 특수문자 조합
+
+        # 비밀번호
         Password="password123!@#",
+
         # 사업자번호 "-" 제외
         CorpNum="0000000000",
+
         # 대표자성명 (최대 100자)
         CEOName="테스트대표자성명",
+
         # 상호 (최대 200자)
         CorpName="테스트가입상호",
+
         # 주소 (최대 300자)
         Addr="테스트회사주소",
+
         # 업태 (최대 100자)
         BizType="테스트업태",
+
         # 종목 (최대 100자)
         BizClass="테스트업종",
+
         # 담당자 성명 (최대 100자)
         ContactName="담당자성명",
-        # 담당자 이메일주소 (최대 100자)
+
+        # 담당자 메일 (최대 100자)
         ContactEmail="",
-        # 담당자 연락처 (최대 20자)
+
+        # 담당자 휴대폰 (최대 20자)
         ContactTEL="",
     )
 
     result = faxService.joinMember(newMember)
 
     print("처리결과 : %d %s" % (result.code, result.message))
+    
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

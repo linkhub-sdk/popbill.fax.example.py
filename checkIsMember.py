@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
-- https://developers.popbill.com/reference/fax/python/api/member#CheckIsMember
+- https://developers.popbill.com/reference/fax/python/common-api/member#CheckIsMember
 """
 
 try:

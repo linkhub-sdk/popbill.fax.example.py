@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 연동회원의 포인트 환불신청내역을 확인합니다.
-- https://developers.popbill.com/reference/fax/python/api/point#GetRefundHistory
+- https://developers.popbill.com/reference/fax/python/common-api/point#GetRefundHistory
 """
 
 try:

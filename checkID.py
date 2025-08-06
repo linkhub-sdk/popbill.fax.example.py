@@ -20,7 +20,7 @@ faxService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 팝빌회원 아이디 중복여부를 확인합니다.
-- https://developers.popbill.com/reference/fax/python/api/member#CheckID
+- https://developers.popbill.com/reference/fax/python/common-api/member#CheckID
 """
 
 try:
@@ -32,5 +32,6 @@ try:
     response = faxService.checkID(memberID)
 
     print("처리결과 : [%d] %s" % (response.code, response.message))
+    
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
